@@ -1,0 +1,14 @@
+---
+- name: Update Repo
+  package: update_cache=yes
+
+- name: Install Apache
+  package:
+    name: apache2
+    state: present
+
+- name: Display Hostname
+  shell: "{{ lookup('file', 'display_hostname.sh') }}"
+
+- name: Change Timezone to Africa/Lagos
+  command: sudo timedatectl set-timezone Africa/Lagos

@@ -1,0 +1,8 @@
+---
+- name: Install Apache and Set Timezone
+  hosts: all
+  become: true
+  vars:
+    ansible_user: ubuntu
+  roles:
+    - role
