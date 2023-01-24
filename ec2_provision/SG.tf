@@ -1,6 +1,6 @@
 resource "aws_security_group" "triserver_sg" {
   name        = "triserver_sg"
-  description = "allow incoming traffic on port 80"
+  description = "allow incoming traffic on port SSH and HTTP"
   vpc_id      = aws_vpc.triserver_vpc.id
 
   dynamic "ingress" {

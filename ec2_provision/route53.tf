@@ -12,3 +12,7 @@ resource "aws_route53_record" "r53" {
     evaluate_target_health = true
   }
 }
+
+output "name_servers" {
+  value = aws_route53_zone.primary.name_servers
+}
