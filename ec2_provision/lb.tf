@@ -6,11 +6,6 @@ resource "aws_lb_target_group" "triserver_tg" {
 }
 
 resource "aws_lb_target_group_attachment" "triserver_tg_attachment1" {
-  #  for_each = {
-  #    triserver-1 = aws_instance.triserver.0.id
-  #    triserver-2 = aws_instance.triserver.1.id
-  #    triserver-3 = aws_instance.triserver.2.id
-  #  }
   for_each         = aws_instance.triserver
   target_group_arn = aws_lb_target_group.triserver_tg.arn
   target_id        = each.value.id
