@@ -22,4 +22,5 @@ provider "aws" {
 #  api_user    = var.namecheap_api_user
 #  api_key     = var.namecheap_api_key
 #  use_sandbox = false
+#
 #}
