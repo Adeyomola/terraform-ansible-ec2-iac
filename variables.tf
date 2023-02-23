@@ -1,1 +1,1 @@
-variable public_key {}
+variable "public_key" {}
